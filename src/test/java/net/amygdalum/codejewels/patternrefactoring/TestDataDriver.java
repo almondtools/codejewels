@@ -10,11 +10,6 @@ import java.util.List;
 import java.util.Map;
 import java.util.concurrent.CompletableFuture;
 import java.util.stream.Stream;
-import net.amygdalum.codejewels.patternrefactoring.AuthenticationService;
-import net.amygdalum.codejewels.patternrefactoring.BusinessService;
-import net.amygdalum.codejewels.patternrefactoring.DBRequest;
-import net.amygdalum.codejewels.patternrefactoring.DBService;
-import net.amygdalum.codejewels.patternrefactoring.SerializationService;
 import net.amygdalum.codejewels.patternrefactoring.impl.FakeAuthenticationService;
 import net.amygdalum.codejewels.patternrefactoring.impl.FakeBusinessService;
 import net.amygdalum.codejewels.patternrefactoring.impl.FakeSerializationService;
@@ -142,7 +137,7 @@ class TestDataDriver {
         try (CallsiteRecorder recorder = CallsiteRecorder.create(configurator, new Class[] { DBService.class })) {
             AuthenticationService auth = new FakeAuthenticationService("allowed");
             SerializationService serializer = new FakeSerializationService();
-            BusinessService business = new FakeBusinessService();
+            BusinessService business = new FakeBusinessService(auth);
 
             printTest(recorder, recorder.record(() -> {
                 DBService service = new DBService(auth, serializer, business);

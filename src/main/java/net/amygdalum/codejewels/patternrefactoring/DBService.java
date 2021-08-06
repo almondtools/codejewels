@@ -27,11 +27,10 @@ public class DBService {
             response.setPayload("Access denied");
         } else {
             try {
-                Token token = auth.getToken(request.getId(), user);
-                BusinessService authenaticatedBusiness = business.authenticate(token);
+                auth.authenticate(request.getId(), user);
                 response.setUser(user);
-                response.setRole(token.getRole());
-                ServiceVersion serviceVersion = authenaticatedBusiness.getServiceVersion();
+                response.setRole(auth.checkAuthentication().getRole());
+                ServiceVersion serviceVersion = business.getServiceVersion();
                 if (serviceVersion == null) {
                     response.setStatus(422);
                     response.setPayload("cannot find service version");
@@ -62,15 +61,15 @@ public class DBService {
             LOG.warn("user " + user + " is not authorized");
         } else {
             try {
-                Token token = auth.getToken(request.getId(), user);
-                BusinessService authenaticatedBusiness = business.authenticate(token);
+                auth.authenticate(request.getId(), user);
+
                 response.setUser(user);
-                response.setRole(token.getRole());
+                response.setRole(auth.checkAuthentication().getRole());
 
                 if (isLong(request.getAttribute("offerId"))) {
                     long offerId = Long.parseLong(request.getAttribute("offerId"));
                     double price = Double.parseDouble(request.getAttribute("price"));
-                    Price finalPrice = authenaticatedBusiness.addPosition(offerId, price);
+                    Price finalPrice = business.addPosition(offerId, price);
                     if (finalPrice == null) {
                         response.setStatus(422);
                         response.setPayload("cannot find price for id " + offerId);
@@ -102,12 +101,13 @@ public class DBService {
             LOG.warn("user " + user + " is not authorized");
         } else {
             try {
-                Token token = auth.getToken(request.getId(), user);
-                BusinessService authenaticatedBusiness = business.authenticate(token);
+                auth.authenticate(request.getId(), user);
+
                 response.setUser(user);
-                response.setRole(token.getRole());
+                response.setRole(auth.checkAuthentication().getRole());
+
                 long offerId = Long.parseLong(request.getAttribute("offerId"));
-                Offer offer = authenaticatedBusiness.getOffer(offerId);
+                Offer offer = business.getOffer(offerId);
                 if (offer == null) {
                     response.setStatus(422);
                     response.setPayload("cannot find offer for id " + offerId);

@@ -11,12 +11,6 @@ import static org.hamcrest.Matchers.equalTo;
 import java.util.HashMap;
 import java.util.List;
 import java.util.Map;
-import net.amygdalum.codejewels.patternrefactoring.AuthenticationService;
-import net.amygdalum.codejewels.patternrefactoring.BusinessService;
-import net.amygdalum.codejewels.patternrefactoring.DBRequest;
-import net.amygdalum.codejewels.patternrefactoring.DBResponse;
-import net.amygdalum.codejewels.patternrefactoring.DBService;
-import net.amygdalum.codejewels.patternrefactoring.SerializationService;
 import net.amygdalum.codejewels.patternrefactoring.impl.FakeAuthenticationService;
 import net.amygdalum.codejewels.patternrefactoring.impl.FakeBusinessService;
 import net.amygdalum.codejewels.patternrefactoring.impl.FakeSerializationService;
@@ -40,7 +34,7 @@ public class GeneratedTest {
             List<String> authenticated = list1;
         }.as(FakeAuthenticationService.class);
         FakeSerializationService fakeSerializationService1 = new FakeSerializationService();
-        FakeBusinessService fakeBusinessService1 = new FakeBusinessService();
+        FakeBusinessService fakeBusinessService1 = new FakeBusinessService(authenticationService1);
         DBService dBService1 = new DBService(authenticationService1, fakeSerializationService1, fakeBusinessService1);
         DBRequest dBRequest1 = new DBRequest();
         dBRequest1.setId("1");
@@ -89,7 +83,7 @@ public class GeneratedTest {
             List<String> authenticated = list1;
         }.as(FakeAuthenticationService.class);
         FakeSerializationService fakeSerializationService1 = new FakeSerializationService();
-        FakeBusinessService fakeBusinessService1 = new FakeBusinessService();
+        FakeBusinessService fakeBusinessService1 = new FakeBusinessService(authenticationService1);
         DBService dBService1 = new DBService(authenticationService1, fakeSerializationService1, fakeBusinessService1);
         DBRequest dBRequest1 = new DBRequest();
         dBRequest1.setId("2");
@@ -142,7 +136,7 @@ public class GeneratedTest {
             List<String> authenticated = list1;
         }.as(FakeAuthenticationService.class);
         FakeSerializationService fakeSerializationService1 = new FakeSerializationService();
-        FakeBusinessService fakeBusinessService1 = new FakeBusinessService();
+        FakeBusinessService fakeBusinessService1 = new FakeBusinessService(authenticationService1);
         DBService dBService1 = new DBService(authenticationService1, fakeSerializationService1, fakeBusinessService1);
         DBRequest dBRequest1 = new DBRequest();
         dBRequest1.setId("10");
@@ -195,7 +189,7 @@ public class GeneratedTest {
             List<String> authenticated = list1;
         }.as(FakeAuthenticationService.class);
         FakeSerializationService fakeSerializationService1 = new FakeSerializationService();
-        FakeBusinessService fakeBusinessService1 = new FakeBusinessService();
+        FakeBusinessService fakeBusinessService1 = new FakeBusinessService(authenticationService1);
         DBService dBService1 = new DBService(authenticationService1, fakeSerializationService1, fakeBusinessService1);
         DBRequest dBRequest1 = new DBRequest();
         dBRequest1.setId("100");
@@ -244,7 +238,7 @@ public class GeneratedTest {
             List<String> authenticated = list1;
         }.as(FakeAuthenticationService.class);
         FakeSerializationService fakeSerializationService1 = new FakeSerializationService();
-        FakeBusinessService fakeBusinessService1 = new FakeBusinessService();
+        FakeBusinessService fakeBusinessService1 = new FakeBusinessService(authenticationService1);
         DBService dBService1 = new DBService(authenticationService1, fakeSerializationService1, fakeBusinessService1);
         DBRequest dBRequest1 = new DBRequest();
         dBRequest1.setId("1");
@@ -294,7 +288,7 @@ public class GeneratedTest {
             List<String> authenticated = list1;
         }.as(FakeAuthenticationService.class);
         FakeSerializationService fakeSerializationService1 = new FakeSerializationService();
-        FakeBusinessService fakeBusinessService1 = new FakeBusinessService();
+        FakeBusinessService fakeBusinessService1 = new FakeBusinessService(authenticationService1);
         DBService dBService1 = new DBService(authenticationService1, fakeSerializationService1, fakeBusinessService1);
         DBRequest dBRequest1 = new DBRequest();
         dBRequest1.setId("2");
@@ -348,7 +342,7 @@ public class GeneratedTest {
             List<String> authenticated = list1;
         }.as(FakeAuthenticationService.class);
         FakeSerializationService fakeSerializationService1 = new FakeSerializationService();
-        FakeBusinessService fakeBusinessService1 = new FakeBusinessService();
+        FakeBusinessService fakeBusinessService1 = new FakeBusinessService(authenticationService1);
         DBService dBService1 = new DBService(authenticationService1, fakeSerializationService1, fakeBusinessService1);
         DBRequest dBRequest1 = new DBRequest();
         dBRequest1.setId("3");
@@ -402,7 +396,7 @@ public class GeneratedTest {
             List<String> authenticated = list1;
         }.as(FakeAuthenticationService.class);
         FakeSerializationService fakeSerializationService1 = new FakeSerializationService();
-        FakeBusinessService fakeBusinessService1 = new FakeBusinessService();
+        FakeBusinessService fakeBusinessService1 = new FakeBusinessService(authenticationService1);
         DBService dBService1 = new DBService(authenticationService1, fakeSerializationService1, fakeBusinessService1);
         DBRequest dBRequest1 = new DBRequest();
         dBRequest1.setId("10");
@@ -456,7 +450,7 @@ public class GeneratedTest {
             List<String> authenticated = list1;
         }.as(FakeAuthenticationService.class);
         FakeSerializationService fakeSerializationService1 = new FakeSerializationService();
-        FakeBusinessService fakeBusinessService1 = new FakeBusinessService();
+        FakeBusinessService fakeBusinessService1 = new FakeBusinessService(authenticationService1);
         DBService dBService1 = new DBService(authenticationService1, fakeSerializationService1, fakeBusinessService1);
         DBRequest dBRequest1 = new DBRequest();
         dBRequest1.setId("100");
@@ -506,7 +500,7 @@ public class GeneratedTest {
             List<String> authenticated = list1;
         }.as(FakeAuthenticationService.class);
         FakeSerializationService fakeSerializationService1 = new FakeSerializationService();
-        FakeBusinessService fakeBusinessService1 = new FakeBusinessService();
+        FakeBusinessService fakeBusinessService1 = new FakeBusinessService(authenticationService1);
         DBService dBService1 = new DBService(authenticationService1, fakeSerializationService1, fakeBusinessService1);
         DBRequest dBRequest1 = new DBRequest();
         dBRequest1.setId("1");
@@ -557,7 +551,7 @@ public class GeneratedTest {
             List<String> authenticated = list1;
         }.as(FakeAuthenticationService.class);
         FakeSerializationService fakeSerializationService1 = new FakeSerializationService();
-        FakeBusinessService fakeBusinessService1 = new FakeBusinessService();
+        FakeBusinessService fakeBusinessService1 = new FakeBusinessService(authenticationService1);
         DBService dBService1 = new DBService(authenticationService1, fakeSerializationService1, fakeBusinessService1);
         DBRequest dBRequest1 = new DBRequest();
         dBRequest1.setId("2");
@@ -612,7 +606,7 @@ public class GeneratedTest {
             List<String> authenticated = list1;
         }.as(FakeAuthenticationService.class);
         FakeSerializationService fakeSerializationService1 = new FakeSerializationService();
-        FakeBusinessService fakeBusinessService1 = new FakeBusinessService();
+        FakeBusinessService fakeBusinessService1 = new FakeBusinessService(authenticationService1);
         DBService dBService1 = new DBService(authenticationService1, fakeSerializationService1, fakeBusinessService1);
         DBRequest dBRequest1 = new DBRequest();
         dBRequest1.setId("3");
@@ -663,7 +657,7 @@ public class GeneratedTest {
             List<String> authenticated = list1;
         }.as(FakeAuthenticationService.class);
         FakeSerializationService fakeSerializationService1 = new FakeSerializationService();
-        FakeBusinessService fakeBusinessService1 = new FakeBusinessService();
+        FakeBusinessService fakeBusinessService1 = new FakeBusinessService(authenticationService1);
         DBService dBService1 = new DBService(authenticationService1, fakeSerializationService1, fakeBusinessService1);
         DBRequest dBRequest1 = new DBRequest();
         dBRequest1.setId("4");
@@ -714,7 +708,7 @@ public class GeneratedTest {
             List<String> authenticated = list1;
         }.as(FakeAuthenticationService.class);
         FakeSerializationService fakeSerializationService1 = new FakeSerializationService();
-        FakeBusinessService fakeBusinessService1 = new FakeBusinessService();
+        FakeBusinessService fakeBusinessService1 = new FakeBusinessService(authenticationService1);
         DBService dBService1 = new DBService(authenticationService1, fakeSerializationService1, fakeBusinessService1);
         DBRequest dBRequest1 = new DBRequest();
         dBRequest1.setId("10");
@@ -769,7 +763,7 @@ public class GeneratedTest {
             List<String> authenticated = list1;
         }.as(FakeAuthenticationService.class);
         FakeSerializationService fakeSerializationService1 = new FakeSerializationService();
-        FakeBusinessService fakeBusinessService1 = new FakeBusinessService();
+        FakeBusinessService fakeBusinessService1 = new FakeBusinessService(authenticationService1);
         DBService dBService1 = new DBService(authenticationService1, fakeSerializationService1, fakeBusinessService1);
         DBRequest dBRequest1 = new DBRequest();
         dBRequest1.setId("100");
