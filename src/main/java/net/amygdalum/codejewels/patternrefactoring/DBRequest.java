@@ -16,12 +16,12 @@ public class DBRequest {
         this.user = user;
     }
 
-    public String getAttribute(String attribute) {
-        return attributes.get(attribute);
-    }
-
     public void setAttributes(Map<String, String> attributes) {
         this.attributes = attributes;
+    }
+
+    public Map<String, String> getAttributes() {
+        return attributes;
     }
 
     public String getId() {

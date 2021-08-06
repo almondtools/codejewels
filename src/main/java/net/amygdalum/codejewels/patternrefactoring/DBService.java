@@ -66,9 +66,9 @@ public class DBService {
                 response.setUser(user);
                 response.setRole(auth.checkAuthentication().getRole());
 
-                if (isLong(request.getAttribute("offerId"))) {
-                    long offerId = Long.parseLong(request.getAttribute("offerId"));
-                    double price = Double.parseDouble(request.getAttribute("price"));
+                if (isLong(request.getAttributes().get("offerId"))) {
+                    long offerId = Long.parseLong(request.getAttributes().get("offerId"));
+                    double price = Double.parseDouble(request.getAttributes().get("price"));
                     Price finalPrice = business.addPosition(offerId, price);
                     if (finalPrice == null) {
                         response.setStatus(422);
@@ -106,7 +106,7 @@ public class DBService {
                 response.setUser(user);
                 response.setRole(auth.checkAuthentication().getRole());
 
-                long offerId = Long.parseLong(request.getAttribute("offerId"));
+                long offerId = Long.parseLong(request.getAttributes().get("offerId"));
                 Offer offer = business.getOffer(offerId);
                 if (offer == null) {
                     response.setStatus(422);
