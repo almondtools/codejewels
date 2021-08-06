@@ -61,10 +61,6 @@ public class GeneratedTest {
             Matcher<?> auth = new GenericMatcher() {
                 Matcher<?> authenticated = containsInOrder(String.class, "allowed");
             }.matching(FakeAuthenticationService.class, AuthenticationService.class);
-            Matcher<?> business = new GenericMatcher() {
-            }.matching(FakeBusinessService.class, BusinessService.class);
-            Matcher<?> serializer = new GenericMatcher() {
-            }.matching(FakeSerializationService.class, SerializationService.class);
         }.matching(DBService.class));
         assertThat("expected no change, but was:", dBRequest1, new GenericMatcher() {
             Matcher<?> attributes = noEntries(String.class, String.class);
@@ -114,10 +110,6 @@ public class GeneratedTest {
             Matcher<?> auth = new GenericMatcher() {
                 Matcher<?> authenticated = containsInOrder(String.class, "allowed");
             }.matching(FakeAuthenticationService.class, AuthenticationService.class);
-            Matcher<?> business = new GenericMatcher() {
-            }.matching(FakeBusinessService.class, BusinessService.class);
-            Matcher<?> serializer = new GenericMatcher() {
-            }.matching(FakeSerializationService.class, SerializationService.class);
         }.matching(DBService.class));
         assertThat("expected no change, but was:", dBRequest1, new GenericMatcher() {
             Matcher<?> attributes = noEntries(String.class, String.class);
@@ -167,10 +159,6 @@ public class GeneratedTest {
             Matcher<?> auth = new GenericMatcher() {
                 Matcher<?> authenticated = containsInOrder(String.class, "allowed");
             }.matching(FakeAuthenticationService.class, AuthenticationService.class);
-            Matcher<?> business = new GenericMatcher() {
-            }.matching(FakeBusinessService.class, BusinessService.class);
-            Matcher<?> serializer = new GenericMatcher() {
-            }.matching(FakeSerializationService.class, SerializationService.class);
         }.matching(DBService.class));
         assertThat("expected no change, but was:", dBRequest1, new GenericMatcher() {
             Matcher<?> attributes = noEntries(String.class, String.class);
@@ -216,10 +204,6 @@ public class GeneratedTest {
             Matcher<?> auth = new GenericMatcher() {
                 Matcher<?> authenticated = containsInOrder(String.class, "allowed");
             }.matching(FakeAuthenticationService.class, AuthenticationService.class);
-            Matcher<?> business = new GenericMatcher() {
-            }.matching(FakeBusinessService.class, BusinessService.class);
-            Matcher<?> serializer = new GenericMatcher() {
-            }.matching(FakeSerializationService.class, SerializationService.class);
         }.matching(DBService.class));
         assertThat("expected no change, but was:", dBRequest1, new GenericMatcher() {
             Matcher<?> attributes = noEntries(String.class, String.class);
@@ -266,10 +250,6 @@ public class GeneratedTest {
             Matcher<?> auth = new GenericMatcher() {
                 Matcher<?> authenticated = containsInOrder(String.class, "allowed");
             }.matching(FakeAuthenticationService.class, AuthenticationService.class);
-            Matcher<?> business = new GenericMatcher() {
-            }.matching(FakeBusinessService.class, BusinessService.class);
-            Matcher<?> serializer = new GenericMatcher() {
-            }.matching(FakeSerializationService.class, SerializationService.class);
         }.matching(DBService.class));
         assertThat("expected no change, but was:", dBRequest1, new GenericMatcher() {
             Matcher<?> attributes = containsEntries(String.class, String.class).entry("offerId", "1");
@@ -320,10 +300,6 @@ public class GeneratedTest {
             Matcher<?> auth = new GenericMatcher() {
                 Matcher<?> authenticated = containsInOrder(String.class, "allowed");
             }.matching(FakeAuthenticationService.class, AuthenticationService.class);
-            Matcher<?> business = new GenericMatcher() {
-            }.matching(FakeBusinessService.class, BusinessService.class);
-            Matcher<?> serializer = new GenericMatcher() {
-            }.matching(FakeSerializationService.class, SerializationService.class);
         }.matching(DBService.class));
         assertThat("expected no change, but was:", dBRequest1, new GenericMatcher() {
             Matcher<?> attributes = containsEntries(String.class, String.class).entry("offerId", "2");
@@ -374,10 +350,6 @@ public class GeneratedTest {
             Matcher<?> auth = new GenericMatcher() {
                 Matcher<?> authenticated = containsInOrder(String.class, "allowed");
             }.matching(FakeAuthenticationService.class, AuthenticationService.class);
-            Matcher<?> business = new GenericMatcher() {
-            }.matching(FakeBusinessService.class, BusinessService.class);
-            Matcher<?> serializer = new GenericMatcher() {
-            }.matching(FakeSerializationService.class, SerializationService.class);
         }.matching(DBService.class));
         assertThat("expected no change, but was:", dBRequest1, new GenericMatcher() {
             Matcher<?> attributes = containsEntries(String.class, String.class).entry("offerId", "broken");
@@ -428,10 +400,6 @@ public class GeneratedTest {
             Matcher<?> auth = new GenericMatcher() {
                 Matcher<?> authenticated = containsInOrder(String.class, "allowed");
             }.matching(FakeAuthenticationService.class, AuthenticationService.class);
-            Matcher<?> business = new GenericMatcher() {
-            }.matching(FakeBusinessService.class, BusinessService.class);
-            Matcher<?> serializer = new GenericMatcher() {
-            }.matching(FakeSerializationService.class, SerializationService.class);
         }.matching(DBService.class));
         assertThat("expected no change, but was:", dBRequest1, new GenericMatcher() {
             Matcher<?> attributes = containsEntries(String.class, String.class).entry("offerId", "10");
@@ -478,10 +446,6 @@ public class GeneratedTest {
             Matcher<?> auth = new GenericMatcher() {
                 Matcher<?> authenticated = containsInOrder(String.class, "allowed");
             }.matching(FakeAuthenticationService.class, AuthenticationService.class);
-            Matcher<?> business = new GenericMatcher() {
-            }.matching(FakeBusinessService.class, BusinessService.class);
-            Matcher<?> serializer = new GenericMatcher() {
-            }.matching(FakeSerializationService.class, SerializationService.class);
         }.matching(DBService.class));
         assertThat("expected no change, but was:", dBRequest1, new GenericMatcher() {
             Matcher<?> attributes = containsEntries(String.class, String.class).entry("offerId", "100");
@@ -529,10 +493,6 @@ public class GeneratedTest {
             Matcher<?> auth = new GenericMatcher() {
                 Matcher<?> authenticated = containsInOrder(String.class, "allowed");
             }.matching(FakeAuthenticationService.class, AuthenticationService.class);
-            Matcher<?> business = new GenericMatcher() {
-            }.matching(FakeBusinessService.class, BusinessService.class);
-            Matcher<?> serializer = new GenericMatcher() {
-            }.matching(FakeSerializationService.class, SerializationService.class);
         }.matching(DBService.class));
         assertThat("expected no change, but was:", dBRequest1, new GenericMatcher() {
             Matcher<?> attributes = containsEntries(String.class, String.class).entry("price", "42.0").entry("offerId", "1");
@@ -584,10 +544,6 @@ public class GeneratedTest {
             Matcher<?> auth = new GenericMatcher() {
                 Matcher<?> authenticated = containsInOrder(String.class, "allowed");
             }.matching(FakeAuthenticationService.class, AuthenticationService.class);
-            Matcher<?> business = new GenericMatcher() {
-            }.matching(FakeBusinessService.class, BusinessService.class);
-            Matcher<?> serializer = new GenericMatcher() {
-            }.matching(FakeSerializationService.class, SerializationService.class);
         }.matching(DBService.class));
         assertThat("expected no change, but was:", dBRequest1, new GenericMatcher() {
             Matcher<?> attributes = containsEntries(String.class, String.class).entry("price", "42.0").entry("offerId", "1");
@@ -635,10 +591,6 @@ public class GeneratedTest {
             Matcher<?> auth = new GenericMatcher() {
                 Matcher<?> authenticated = containsInOrder(String.class, "allowed");
             }.matching(FakeAuthenticationService.class, AuthenticationService.class);
-            Matcher<?> business = new GenericMatcher() {
-            }.matching(FakeBusinessService.class, BusinessService.class);
-            Matcher<?> serializer = new GenericMatcher() {
-            }.matching(FakeSerializationService.class, SerializationService.class);
         }.matching(DBService.class));
         assertThat("expected no change, but was:", dBRequest1, new GenericMatcher() {
             Matcher<?> attributes = containsEntries(String.class, String.class).entry("price", "21.0").entry("offerId", "2");
@@ -677,19 +629,15 @@ public class GeneratedTest {
         // Assert
         logger1.verify();
         assertThat(dBResponse1, new GenericMatcher() {
-            Object payload = null;
+            Object payload = "offerId is not a number";
             String role = "allowed";
-            int status = 0;
+            int status = 422;
             String user = "allowed";
         }.matching(DBResponse.class));
         assertThat("expected no change, but was:", dBService1, new GenericMatcher() {
             Matcher<?> auth = new GenericMatcher() {
                 Matcher<?> authenticated = containsInOrder(String.class, "allowed");
             }.matching(FakeAuthenticationService.class, AuthenticationService.class);
-            Matcher<?> business = new GenericMatcher() {
-            }.matching(FakeBusinessService.class, BusinessService.class);
-            Matcher<?> serializer = new GenericMatcher() {
-            }.matching(FakeSerializationService.class, SerializationService.class);
         }.matching(DBService.class));
         assertThat("expected no change, but was:", dBRequest1, new GenericMatcher() {
             Matcher<?> attributes = containsEntries(String.class, String.class).entry("price", "broken").entry("offerId", "broken");
@@ -741,10 +689,6 @@ public class GeneratedTest {
             Matcher<?> auth = new GenericMatcher() {
                 Matcher<?> authenticated = containsInOrder(String.class, "allowed");
             }.matching(FakeAuthenticationService.class, AuthenticationService.class);
-            Matcher<?> business = new GenericMatcher() {
-            }.matching(FakeBusinessService.class, BusinessService.class);
-            Matcher<?> serializer = new GenericMatcher() {
-            }.matching(FakeSerializationService.class, SerializationService.class);
         }.matching(DBService.class));
         assertThat("expected no change, but was:", dBRequest1, new GenericMatcher() {
             Matcher<?> attributes = containsEntries(String.class, String.class).entry("price", "11.0").entry("offerId", "10");
@@ -792,10 +736,6 @@ public class GeneratedTest {
             Matcher<?> auth = new GenericMatcher() {
                 Matcher<?> authenticated = containsInOrder(String.class, "allowed");
             }.matching(FakeAuthenticationService.class, AuthenticationService.class);
-            Matcher<?> business = new GenericMatcher() {
-            }.matching(FakeBusinessService.class, BusinessService.class);
-            Matcher<?> serializer = new GenericMatcher() {
-            }.matching(FakeSerializationService.class, SerializationService.class);
         }.matching(DBService.class));
         assertThat("expected no change, but was:", dBRequest1, new GenericMatcher() {
             Matcher<?> attributes = containsEntries(String.class, String.class).entry("price", "11.0").entry("offerId", "100");
