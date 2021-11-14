@@ -10,14 +10,14 @@ public class ReplaceImplicitTreeWithComposite {
 		
 		@Override
 		public String toString() {
-			String orders = "<orders>";
-			orders += "<order number='123'>";
-			orders += "<item number='x1786'>";
-			orders += "carDoor";
-			orders += "</item>";
-			orders += "</order>";
-			orders += "</orders>";
-			return orders;
+			String orders1 = "<orders>";
+			String orders2 = orders1 + "<order number='123'>";
+			String orders3 = orders2 + "<item number='x1786'>";
+			String orders4 = orders3 + "carDoor";
+			String orders5 = orders4 + "</item>";
+			String orders6 = orders5 + "</order>";
+			String orders7 = orders6 + "</orders>";
+			return orders7;
 		}
 	}
 }
