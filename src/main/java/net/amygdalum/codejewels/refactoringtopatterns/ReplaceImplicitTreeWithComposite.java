@@ -15,7 +15,7 @@ public class ReplaceImplicitTreeWithComposite {
 							+ "carDoor"
 							+ "</item>"
 							+ "</order>";
-			return new TagNode(content).toString();
+			return new TagNode("orders", content).toString();
 		}
 	}
 	
@@ -23,9 +23,9 @@ public class ReplaceImplicitTreeWithComposite {
 		private String name;
 		private String content;
 
-		public TagNode(String content) {
+		public TagNode(String name, String content) {
+			this.name = name;
 			this.content = content;
-			this.name = "orders";
 		}
 		
 		@Override
