@@ -20,12 +20,12 @@ public class ReplaceImplicitTreeWithComposite {
 	}
 	
 	public static class TagNode {
-		private String content;
 		private String name;
+		private String content;
 
 		public TagNode(String content) {
 			this.content = content;
-			name = "orders";
+			this.name = "orders";
 		}
 		
 		@Override
