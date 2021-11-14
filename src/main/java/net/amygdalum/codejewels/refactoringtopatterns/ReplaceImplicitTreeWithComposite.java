@@ -25,11 +25,11 @@ public class ReplaceImplicitTreeWithComposite {
 
 		public TagNode(String content) {
 			this.content = content;
+			name = "orders";
 		}
 		
 		@Override
 		public String toString() {
-			name = "orders";
 			return "<"
 				+ name
 				+ ">"
