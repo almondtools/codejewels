@@ -15,9 +15,7 @@ public class ReplaceImplicitTreeWithComposite {
 							+ "carDoor"
 							+ "</item>"
 							+ "</order>";
-			return "<orders>"
-				+ content
-				+ "</orders>";
+			return new TagNode(content).toString();
 		}
 	}
 	
