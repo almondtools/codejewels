@@ -11,7 +11,11 @@ public class ReplaceImplicitTreeWithComposite {
 		return new ConstantNode().toString();
 	}
 
-	public static class ConstantNode {
+	public interface Node {
+		
+	}
+	
+	public static class ConstantNode implements Node {
 
 		@Override
 		public String toString() {
@@ -29,7 +33,7 @@ public class ReplaceImplicitTreeWithComposite {
 		}
 	}
 
-	public static class TagNode {
+	public static class TagNode implements Node {
 		private String name;
 		private String content;
 		private SortedMap<String, String> attributes;
