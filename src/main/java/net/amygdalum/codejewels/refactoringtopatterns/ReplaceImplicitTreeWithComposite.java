@@ -15,15 +15,15 @@ public class ReplaceImplicitTreeWithComposite {
 
 		@Override
 		public String toString() {
-			String item = new TagNode("item", "carDoor")
+			String item = new TagNode("item")
 				.addAttribute("number", "x1786")
 				.addContent("carDoor")
 				.toString();
-			String content = new TagNode("order", item)
+			String content = new TagNode("order")
 				.addAttribute("number", "123")
 				.addContent(item)
 				.toString();
-			return new TagNode("orders", content)
+			return new TagNode("orders")
 				.addContent(content)
 				.toString();
 		}
@@ -34,9 +34,8 @@ public class ReplaceImplicitTreeWithComposite {
 		private String content;
 		private SortedMap<String, String> attributes;
 
-		public TagNode(String name, String content) {
+		public TagNode(String name) {
 			this.name = name;
-			this.content = content;
 			this.attributes = new TreeMap<>();
 		}
 
