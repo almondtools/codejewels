@@ -49,7 +49,6 @@ public class ReplaceImplicitTreeWithComposite {
 	public static class TagNode implements Node {
 		private String name;
 		private List<Node> nodes;
-		private String content;
 		private SortedMap<String, String> attributes;
 
 		public TagNode(String name) {
@@ -65,7 +64,6 @@ public class ReplaceImplicitTreeWithComposite {
 
 		public TagNode addNode(Node node) {
 			this.nodes.add(node);
-			this.content = node.toString();
 			return this;
 		}
 
