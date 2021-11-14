@@ -38,22 +38,6 @@ public class ReplaceImplicitTreeWithComposite {
 		}
 	}
 
-	public static class ConstantNode implements Node {
-
-		@Override
-		public String toString() {
-			Node item = new TagNode("item")
-				.addAttribute("number", "x1786")
-				.addNode(new TextNode("carDoor"));
-			Node order = new TagNode("order")
-				.addAttribute("number", "123")
-				.addNode(item);
-			return new TagNode("orders")
-				.addNode(order)
-				.toString();
-		}
-	}
-
 	public static class TagNode implements Node {
 		private String name;
 		private List<Node> nodes;
