@@ -18,9 +18,9 @@ public class ReplaceImplicitTreeWithComposite {
 			String item = "<item number='x1786'>"
 				+ "carDoor"
 				+ "</item>";
-			String content = "<order number='123'>"
-				+ item
-				+ "</order>";
+			String content = new TagNode("order", item)
+				.addAttribute("number", "123")
+				.toString();
 			return new TagNode("orders", content).toString();
 		}
 	}
