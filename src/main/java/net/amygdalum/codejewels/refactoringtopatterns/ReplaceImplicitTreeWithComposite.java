@@ -2,6 +2,8 @@ package net.amygdalum.codejewels.refactoringtopatterns;
 
 import static java.util.stream.Collectors.joining;
 
+import java.util.ArrayList;
+import java.util.List;
 import java.util.SortedMap;
 import java.util.TreeMap;
 
@@ -46,12 +48,14 @@ public class ReplaceImplicitTreeWithComposite {
 
 	public static class TagNode implements Node {
 		private String name;
+		private List<Node> nodes;
 		private String content;
 		private SortedMap<String, String> attributes;
 
 		public TagNode(String name) {
 			this.name = name;
 			this.attributes = new TreeMap<>();
+			this.nodes = new ArrayList<>();
 		}
 
 		public TagNode addAttribute(String name, String value) {
