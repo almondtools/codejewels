@@ -15,6 +15,13 @@ public class ReplaceImplicitTreeWithComposite {
 
 	}
 
+	public static class TextNode implements Node {
+		@Override
+		public String toString() {
+			return super.toString();
+		}
+	}
+
 	public static class ConstantNode implements Node {
 
 		@Override
