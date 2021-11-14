@@ -74,7 +74,7 @@ public class ReplaceImplicitTreeWithComposite {
 			return "<" + name + attributes.entrySet().stream()
 				.map(e -> " " + e.getKey() + "='" + e.getValue() + "'")
 				.collect(joining()) + ">"
-				+ content
+				+ nodes.stream().map(Object::toString).collect(joining())
 				+ "</" + name + ">";
 		}
 	}
