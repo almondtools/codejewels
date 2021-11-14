@@ -10,12 +10,13 @@ public class ReplaceImplicitTreeWithComposite {
 
 		@Override
 		public String toString() {
+			String content = "<order number='123'>"
+							+ "<item number='x1786'>"
+							+ "carDoor"
+							+ "</item>"
+							+ "</order>";
 			return "<orders>"
-				+ "<order number='123'>"
-				+ "<item number='x1786'>"
-				+ "carDoor"
-				+ "</item>"
-				+ "</order>"
+				+ content
 				+ "</orders>";
 		}
 	}
