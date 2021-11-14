@@ -1,5 +1,7 @@
 package net.amygdalum.codejewels.refactoringtopatterns;
 
+import static java.util.stream.Collectors.joining;
+
 import java.util.SortedMap;
 import java.util.TreeMap;
 
@@ -14,8 +16,8 @@ public class ReplaceImplicitTreeWithComposite {
 		@Override
 		public String toString() {
 			String item = "<item number='x1786'>"
-							+ "carDoor"
-							+ "</item>";
+				+ "carDoor"
+				+ "</item>";
 			String content = "<order number='123'>"
 				+ item
 				+ "</order>";
@@ -33,7 +35,7 @@ public class ReplaceImplicitTreeWithComposite {
 			this.content = content;
 			this.attributes = new TreeMap<>();
 		}
-		
+
 		public TagNode addAttribute(String name, String value) {
 			this.attributes.put(name, value);
 			return this;
@@ -41,7 +43,9 @@ public class ReplaceImplicitTreeWithComposite {
 
 		@Override
 		public String toString() {
-			return "<" + name + ">"
+			return "<" + name + attributes.entrySet().stream()
+				.map(e -> " " + e.getKey() + "='" + e.getValue() + "'")
+				.collect(joining()) + ">"
 				+ content
 				+ "</" + name + ">";
 		}
