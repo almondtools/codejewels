@@ -11,14 +11,14 @@ public class ReplaceImplicitTreeWithComposite {
 		@Override
 		public String toString() {
 			String content = "<order number='123'>"
-							+ "<item number='x1786'>"
-							+ "carDoor"
-							+ "</item>"
-							+ "</order>";
+				+ "<item number='x1786'>"
+				+ "carDoor"
+				+ "</item>"
+				+ "</order>";
 			return new TagNode("orders", content).toString();
 		}
 	}
-	
+
 	public static class TagNode {
 		private String name;
 		private String content;
@@ -27,16 +27,12 @@ public class ReplaceImplicitTreeWithComposite {
 			this.name = name;
 			this.content = content;
 		}
-		
+
 		@Override
 		public String toString() {
-			return "<"
-				+ name
-				+ ">"
+			return "<" + name + ">"
 				+ content
-				+ "</"
-				+ name
-				+ ">";
+				+ "</" + name + ">";
 		}
 	}
 }
