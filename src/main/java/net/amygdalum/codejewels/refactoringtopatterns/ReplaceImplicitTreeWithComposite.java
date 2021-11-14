@@ -10,10 +10,11 @@ public class ReplaceImplicitTreeWithComposite {
 
 		@Override
 		public String toString() {
+			String item = "<item number='x1786'>"
+							+ "carDoor"
+							+ "</item>";
 			String content = "<order number='123'>"
-				+ "<item number='x1786'>"
-				+ "carDoor"
-				+ "</item>"
+				+ item
 				+ "</order>";
 			return new TagNode("orders", content).toString();
 		}
