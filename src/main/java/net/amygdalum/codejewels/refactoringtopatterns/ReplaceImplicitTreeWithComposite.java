@@ -28,12 +28,13 @@ public class ReplaceImplicitTreeWithComposite {
 		
 		@Override
 		public String toString() {
+			String name = "orders";
 			return "<"
-				+ "orders"
+				+ name
 				+ ">"
 				+ content
 				+ "</"
-				+ "orders"
+				+ name
 				+ ">";
 		}
 	}
