@@ -20,4 +20,19 @@ public class ReplaceImplicitTreeWithComposite {
 				+ "</orders>";
 		}
 	}
+	
+	public static class TagNode {
+		private String content;
+
+		public TagNode(String content) {
+			this.content = content;
+		}
+		
+		@Override
+		public String toString() {
+			return "<orders>"
+				+ content
+				+ "</orders>";
+		}
+	}
 }
