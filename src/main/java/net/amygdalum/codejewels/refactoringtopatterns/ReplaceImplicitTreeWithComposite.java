@@ -17,11 +17,15 @@ public class ReplaceImplicitTreeWithComposite {
 		public String toString() {
 			String item = new TagNode("item", "carDoor")
 				.addAttribute("number", "x1786")
+				.addContent("carDoor")
 				.toString();
 			String content = new TagNode("order", item)
 				.addAttribute("number", "123")
+				.addContent(item)
 				.toString();
-			return new TagNode("orders", content).toString();
+			return new TagNode("orders", content)
+				.addContent(content)
+				.toString();
 		}
 	}
 
