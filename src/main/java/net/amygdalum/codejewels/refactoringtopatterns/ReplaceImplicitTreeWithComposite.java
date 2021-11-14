@@ -19,16 +19,14 @@ public class ReplaceImplicitTreeWithComposite {
 
 		@Override
 		public String toString() {
-			String item = new TagNode("item")
+			Node item = new TagNode("item")
 				.addAttribute("number", "x1786")
-				.addContent("carDoor")
-				.toString();
-			String content = new TagNode("order")
+				.addContent("carDoor");
+			Node order = new TagNode("order")
 				.addAttribute("number", "123")
-				.addContent(item)
-				.toString();
+				.addNode(item);
 			return new TagNode("orders")
-				.addContent(content)
+				.addNode(order)
 				.toString();
 		}
 	}
