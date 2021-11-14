@@ -64,11 +64,6 @@ public class ReplaceImplicitTreeWithComposite {
 			return this;
 		}
 
-		public TagNode addContent(String content) {
-			this.content = content;
-			return this;
-		}
-
 		@Override
 		public String toString() {
 			return "<" + name + attributes.entrySet().stream()
