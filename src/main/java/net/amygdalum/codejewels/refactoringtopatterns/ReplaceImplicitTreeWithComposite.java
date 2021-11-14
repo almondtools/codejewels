@@ -10,14 +10,12 @@ import java.util.TreeMap;
 public class ReplaceImplicitTreeWithComposite {
 
 	public String serializeOrders() {
-		Node item = new TagNode("item")
-			.addAttribute("number", "x1786")
-			.addNode(new TextNode("carDoor"));
-		Node order = new TagNode("order")
-			.addAttribute("number", "123")
-			.addNode(item);
 		return new TagNode("orders")
-			.addNode(order)
+			.addNode(new TagNode("order")
+				.addAttribute("number", "123")
+				.addNode(new TagNode("item")
+					.addAttribute("number", "x1786")
+					.addNode(new TextNode("carDoor"))))
 			.toString();
 	}
 
