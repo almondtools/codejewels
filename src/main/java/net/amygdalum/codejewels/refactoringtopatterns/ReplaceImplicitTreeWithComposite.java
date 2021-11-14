@@ -64,6 +64,7 @@ public class ReplaceImplicitTreeWithComposite {
 		}
 
 		public TagNode addNode(Node node) {
+			this.nodes.add(node);
 			this.content = node.toString();
 			return this;
 		}
