@@ -34,7 +34,7 @@ public class ReplaceImplicitTreeWithComposite {
 		public String toString() {
 			Node item = new TagNode("item")
 				.addAttribute("number", "x1786")
-				.addContent("carDoor");
+				.addNode(new TextNode("carDoor"));
 			Node order = new TagNode("order")
 				.addAttribute("number", "123")
 				.addNode(item);
