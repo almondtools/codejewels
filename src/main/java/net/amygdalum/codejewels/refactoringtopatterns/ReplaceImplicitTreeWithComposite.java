@@ -33,6 +33,11 @@ public class ReplaceImplicitTreeWithComposite {
 			this.content = content;
 			this.attributes = new TreeMap<>();
 		}
+		
+		public TagNode addAttribute(String name, String value) {
+			this.attributes.put(name, value);
+			return this;
+		}
 
 		@Override
 		public String toString() {
