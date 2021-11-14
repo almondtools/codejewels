@@ -12,9 +12,9 @@ public class ReplaceImplicitTreeWithComposite {
 	}
 
 	public interface Node {
-		
+
 	}
-	
+
 	public static class ConstantNode implements Node {
 
 		@Override
@@ -45,6 +45,11 @@ public class ReplaceImplicitTreeWithComposite {
 
 		public TagNode addAttribute(String name, String value) {
 			this.attributes.put(name, value);
+			return this;
+		}
+
+		public TagNode addNode(Node node) {
+			this.content = node.toString();
 			return this;
 		}
 
